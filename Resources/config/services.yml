@@ -1,0 +1,8 @@
+services:
+    sf1.security.authentication.provider:
+        class:  Dsnet\Sf1SecurityBundle\Security\Authentication\Provider\Sf1Provider
+        arguments: ['']
+
+    sf1.security.authentication.listener:
+        class:  Dsnet\Sf1SecurityBundle\Security\Firewall\Sf1Listener
+        arguments: [@security.context, @security.authentication.manager]
